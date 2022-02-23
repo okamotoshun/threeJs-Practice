@@ -2,9 +2,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 let scene, camera, renderer, pointLight, controls
 
-// 読み込み完了したら
-window.addEventListener("load", init)
-
 function init() {
   // シーンを追加
   scene = new THREE.Scene();
@@ -85,3 +82,6 @@ function animate(params) {
   // レンダリング
   renderer.render(scene, camera);
 }
+
+// 読み込み完了したら
+window.addEventListener("load", init)
