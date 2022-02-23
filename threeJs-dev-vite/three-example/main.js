@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-let scene, camera, renderer, pointLight, controls
+let scene, camera, renderer, pointLight, controls;
 
 function init() {
   // シーンを追加
@@ -25,7 +25,7 @@ function init() {
   renderer.render(scene, camera);
 
   // テクスチャーを追加
-  const texture = new THREE.TextureLoader().load('./images/earth.jpg');
+  const texture = new THREE.TextureLoader().load("./images/earth.jpg");
 
   // 地球を描く
   // ジオメトリーを追加(骨格)
@@ -55,7 +55,7 @@ function init() {
   // マウスを操作する
   controls = new OrbitControls(camera, renderer.domElement);
 
-  window.addEventListener("resize", onWindowResize)
+  window.addEventListener('resize', onWindowResize);
 
   animate();
 }
@@ -63,11 +63,11 @@ function init() {
 // ブラウザのリサイズに対応
 function onWindowResize() {
   // レンダラーのサイズを随時更新
-  renderer.setSize(window.innerWidth, window.innerHeight)
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
   // カメラのアスペクト比を正す
-  camera.aspect = window.innerWidth /window.innerHeight
-  camera.updateProjectionMatrix()
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
 }
 
 function animate(params) {
@@ -84,4 +84,4 @@ function animate(params) {
 }
 
 // 読み込み完了したら
-window.addEventListener("load", init)
+window.addEventListener('load', init);
