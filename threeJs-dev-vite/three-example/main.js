@@ -25,7 +25,7 @@ function init() {
   renderer.render(scene, camera);
 
   // テクスチャーを追加
-  const texture = new THREE.TextureLoader().load("./images/earth.jpg");
+  const texture = new THREE.TextureLoader().load("three-example/images/earth.JPG");
 
   // 地球を描く
   // ジオメトリーを追加(骨格)
